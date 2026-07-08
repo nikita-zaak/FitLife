@@ -30,10 +30,8 @@ status = "норма" if 18.5 <= bmi_rounded < 25 else "не норма"
 
 
 # Подсчет воды: вес * 30 мл
-input("А что скажете насчёт нормы воды? Если интересно, нажмите Enter...")
 water_ml = user_weight * 30
 water_l = water_ml / 1000.0
-
 print()
 print(f"Ваш ИМТ: {bmi_rounded}, впечатляет?")
 print(f"ИМТ: {bmi_rounded} — {status}")
