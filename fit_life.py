@@ -26,7 +26,7 @@ user_height = float(input("Введите рост в метрах (напр. 1.
 # 3. Логика расчетов (Функции как "черный ящик": используем арифметику)
 bmi = user_weight / (user_height ** 2)
 bmi_rounded = round(bmi, 1)
-status = "норма" if 18.5 <= bmi_rounded < 25 else
+status = "норма" if 18.5 <= bmi_rounded < 25 else "не норма"
 
 
 # Подсчет воды: вес * 30 мл
@@ -37,7 +37,6 @@ water_l = water_ml / 1000.0
 print()
 print(f"Ваш ИМТ: {bmi_rounded}, впечатляет?")
 print(f"ИМТ: {bmi_rounded} — {status}")
-print("-" * 50)
 
 # 4. Вывод результата
 print("-" * 50)
