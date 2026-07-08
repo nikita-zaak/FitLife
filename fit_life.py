@@ -37,8 +37,9 @@ input("А что скажете насчёт нормы воды? Если ин�
 water_ml = user_weight * 30
 water_l = water_ml / 1000.0
 
-print(f"Рекомендуемая норма воды: {int(water_ml)} мл")
-print(f"({round(water_l, 1)} л) в день")
+bmi = round(user_weight / (user_height ** 2), 1)
+status = "норма" if 18.5 <= bmi < 25 else "не норма"
+print(f"ИМТ: {bmi} — {status}")
 
 
 # 4. Вывод красивого результата
