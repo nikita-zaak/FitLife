@@ -14,7 +14,6 @@ print("-" * 50)
 
 
 # 2. Сбор данных
-input("Давайте приступим к работе, вы готовы? Нажмите Enter...")
 user_age_str = input("Скажите, сколько вам лет? ")
 user_age_int = int(user_age_str)
 print(user_age_int, "— прекрасный возраст.")
@@ -25,11 +24,9 @@ user_height = float(input("Введите рост в метрах (напр. 1.
 
 
 # 3. Логика расчетов (Функции как "черный ящик": используем арифметику)
-print()
-input("Я рассчитал ваш ИМТ, хотите узнать его? Нажмите Enter...")
-bmi = user_weight / (user_height**2)
-print(f"Ваш ИМТ: {round(bmi, 1)}, впечатляет?")
-print("-" * 50)
+bmi = user_weight / (user_height ** 2)
+bmi_rounded = round(bmi, 1)
+status = "норма" if 18.5 <= bmi_rounded < 25 else
 
 
 # Подсчет воды: вес * 30 мл
@@ -37,15 +34,15 @@ input("А что скажете насчёт нормы воды? Если ин�
 water_ml = user_weight * 30
 water_l = water_ml / 1000.0
 
-bmi = round(user_weight / (user_height ** 2), 1)
-status = "норма" if 18.5 <= bmi < 25 else "не норма"
-print(f"ИМТ: {bmi} — {status}")
+print()
+print(f"Ваш ИМТ: {bmi_rounded}, впечатляет?")
+print(f"ИМТ: {bmi_rounded} — {status}")
+print("-" * 50)
 
-
-# 4. Вывод красивого результата
+# 4. Вывод результата
 print("-" * 50)
 print(f"Отчёт для пользователя: {user_name} ({user_age_int} г.)")
-print(f"Ваш Индекс Массы Тела: {round(bmi, 1)}")
+print(f"Ваш Индекс Массы Тела: {bmi_rounded}")
 print(f"Рекомендуемая норма воды: {water_l:.1f} л в день")
 print()
-print("Расчет окончен. Будьте здоровы!")
+print("Расчёт окончен. Будьте здоровы!")
