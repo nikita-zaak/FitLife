@@ -5,7 +5,7 @@ print("ДОБРО ПОЖАЛОВАТЬ!")
 print("-" * 50)
 print("Я ваш персональный помощник по здоровью. Давайте знакомиться:)")
 
-user_name = input("Как вас зовут? ", ).strip().title()
+user_name = input("Как вас зовут? ").strip().title()
 print("Красивое имя! А меня зовут — Фитнес.")
 print("Буду вам помогать,", user_name, end="!\n")
 print("-" * 50)
@@ -45,14 +45,14 @@ while True:
     except ValueError:
         print("Введите число с точкой. ")
 
-bmi = user_weight / (user_height ** 2)
+bmi = user_weight / (user_height**2)
 bmi_rounded = round(bmi, 1)
 status = "норма" if 18.5 <= bmi_rounded < 25 else "не норма"
 
-WATER_PER_KG = 30                  
-water_ml = user_weight * WATER_PER_KG 
-ML_PER_L = 1000                     
-water_l = water_ml / ML_PER_L 
+WATER_PER_KG = 30
+water_ml = user_weight * WATER_PER_KG
+ML_PER_L = 1000
+water_l = water_ml / ML_PER_L
 print()
 print(f"Ваш ИМТ: {bmi_rounded}, впечатляет?")
 print(f"ИМТ: {bmi_rounded} — {status}")
