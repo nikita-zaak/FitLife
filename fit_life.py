@@ -1,12 +1,7 @@
 # Проект FitLife - MVP версия 1.0
 
 
-from constants import (
-    WATER_PER_KG,
-    ML_PER_L,
-    BMI_LOWER_LIMIT,
-    BMI_UPPER_LIMIT,
-)
+from constants import BMI_LOWER_LIMIT, BMI_UPPER_LIMIT, ML_PER_L, WATER_PER_KG
 
 print("ДОБРО ПОЖАЛОВАТЬ!")
 print("-" * 50)
